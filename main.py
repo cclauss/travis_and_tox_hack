@@ -14,4 +14,4 @@ for name, value in inspect.getmembers(platform):
             print('{:>21}() = {}'.format(name, value))
 
 print(sys.platform, sys.version)
-print(json.dumps(os.environ, indent=4))
+print(json.dumps(dict(os.environ), indent=4))
