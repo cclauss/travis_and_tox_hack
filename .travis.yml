@@ -14,12 +14,11 @@ addons:
 # Dependencies
 install:
   - pip install tox
-  # - pip install tox-travis
   - pip install coveralls
 
 # Run tests
 script:
-  - echo ${TRAVIS_PYTHON_VERSION} ${TOX_ENV}
+  - echo ${TRAVIS_PYTHON_VERSION}  --  ${TOX_ENV}
   - python main.py
   - tox -e ${TOX_ENV}
 
