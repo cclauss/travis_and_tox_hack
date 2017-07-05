@@ -1,4 +1,5 @@
 import inspect
+import json
 import os
 import platform
 import sys
@@ -13,4 +14,4 @@ for name, value in inspect.getmembers(platform):
             print('{:>21}() = {}'.format(name, value))
 
 print(sys.platform, sys.version)
-print(os.environs)
+print(json.dump(os.environs, indent=4))
